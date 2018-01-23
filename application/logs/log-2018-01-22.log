@@ -1,0 +1,5 @@
+ERROR - 2018-01-22 01:14:36 --> 404 Page Not Found: Faviconico/index
+ERROR - 2018-01-22 01:14:39 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-22 01:14:39 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-22 01:14:43 --> Severity: Notice --> Undefined variable: teamMemberId /var/www/flow/application/models/Team_member_team_model.php 109
+ERROR - 2018-01-22 01:14:43 --> Severity: error --> Exception: Call to undefined function removeLinkedTeams() /var/www/flow/application/controllers/TeamMember.php 78
