@@ -1,0 +1,56 @@
+ERROR - 2018-01-19 00:22:06 --> Severity: Notice --> Undefined variable: css /var/www/flow/application/views/header.php 20
+ERROR - 2018-01-19 00:22:45 --> Severity: Notice --> Undefined variable: css /var/www/flow/application/views/header.php 25
+ERROR - 2018-01-19 00:30:53 --> Severity: Notice --> Undefined variable: css /var/www/flow/application/views/header.php 25
+ERROR - 2018-01-19 00:32:19 --> Severity: Notice --> Array to string conversion /var/www/flow/application/controllers/Timeline.php 32
+ERROR - 2018-01-19 01:25:08 --> 404 Page Not Found: Clients/index
+ERROR - 2018-01-19 01:25:08 --> 404 Page Not Found: Faviconico/index
+ERROR - 2018-01-19 01:27:45 --> Severity: Notice --> Undefined property: Timeline::$require_auth /var/www/flow/application/controllers/Timeline.php 29
+ERROR - 2018-01-19 19:33:28 --> 404 Page Not Found: Faviconico/index
+ERROR - 2018-01-19 22:59:00 --> Severity: Notice --> Undefined variable: data /var/www/flow/application/controllers/Client.php 38
+ERROR - 2018-01-19 22:59:00 --> 404 Page Not Found: Js/notes
+ERROR - 2018-01-19 22:59:02 --> 404 Page Not Found: Js/notes
+ERROR - 2018-01-19 22:59:41 --> 404 Page Not Found: Js/notes
+ERROR - 2018-01-19 22:59:42 --> 404 Page Not Found: Js/notes
+ERROR - 2018-01-19 23:06:01 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:06:01 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:07:01 --> 404 Page Not Found: Clients/capture
+ERROR - 2018-01-19 23:07:43 --> 404 Page Not Found: Clients/capture
+ERROR - 2018-01-19 23:08:20 --> 404 Page Not Found: Clients/capture
+ERROR - 2018-01-19 23:08:37 --> 404 Page Not Found: Clients/capture
+ERROR - 2018-01-19 23:08:58 --> 404 Page Not Found: Clients/capture
+ERROR - 2018-01-19 23:09:14 --> 404 Page Not Found: Clients/capture
+ERROR - 2018-01-19 23:09:32 --> 404 Page Not Found: Clients/capture
+ERROR - 2018-01-19 23:10:26 --> 404 Page Not Found: Clients/index
+ERROR - 2018-01-19 23:10:30 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:10:30 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:14:00 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:14:00 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:15:25 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:15:25 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:15:28 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:15:28 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:17:26 --> Severity: Notice --> Undefined property: Client::$notes_model /var/www/flow/application/controllers/Client.php 54
+ERROR - 2018-01-19 23:17:26 --> Severity: error --> Exception: Call to a member function capture_client() on null /var/www/flow/application/controllers/Client.php 54
+ERROR - 2018-01-19 23:18:02 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:18:02 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:28:49 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:28:49 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:28:56 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:28:56 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:29:29 --> Severity: Notice --> Undefined variable: userId /var/www/flow/application/models/Client_model.php 88
+ERROR - 2018-01-19 23:29:30 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:29:30 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:30:18 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:30:18 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:31:16 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:31:16 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:32:23 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:32:23 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:32:50 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:32:50 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:33:15 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:33:15 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:33:26 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:33:26 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:34:04 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-19 23:34:04 --> 404 Page Not Found: Css/third_party

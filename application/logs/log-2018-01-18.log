@@ -1,0 +1,35 @@
+ERROR - 2018-01-18 22:55:42 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:56:10 --> 404 Page Not Found: /index
+ERROR - 2018-01-18 22:56:42 --> 404 Page Not Found: /index
+ERROR - 2018-01-18 22:58:06 --> 404 Page Not Found: /index
+ERROR - 2018-01-18 22:58:07 --> 404 Page Not Found: /index
+ERROR - 2018-01-18 22:58:07 --> 404 Page Not Found: /index
+ERROR - 2018-01-18 22:58:07 --> 404 Page Not Found: /index
+ERROR - 2018-01-18 22:58:07 --> 404 Page Not Found: /index
+ERROR - 2018-01-18 22:58:13 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:58:27 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:58:28 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:58:35 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:58:36 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:58:36 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:06 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:07 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:07 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:07 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:08 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:13 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:15 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:34 --> 404 Page Not Found: Home/index
+ERROR - 2018-01-18 22:59:57 --> Severity: error --> Exception: Unable to locate the model you have specified: User_model /var/www/photos/system/core/Loader.php 344
+ERROR - 2018-01-18 23:00:15 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) /var/www/photos/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2018-01-18 23:00:15 --> Unable to connect to the database
+ERROR - 2018-01-18 23:04:36 --> 404 Page Not Found: User/login
+ERROR - 2018-01-18 23:05:02 --> Severity: Warning --> require_once(/var/www/photos/application//libraries/JWT.php): failed to open stream: No such file or directory /var/www/photos/application/controllers/User.php 2
+ERROR - 2018-01-18 23:05:02 --> Severity: Compile Error --> require_once(): Failed opening required '/var/www/photos/application//libraries/JWT.php' (include_path='.:/usr/share/php') /var/www/photos/application/controllers/User.php 2
+ERROR - 2018-01-18 23:06:14 --> Severity: error --> Exception: Unable to locate the model you have specified: Timetable_model /var/www/photos/system/core/Loader.php 344
+ERROR - 2018-01-18 23:07:50 --> Severity: error --> Exception: Call to undefined function getNextSevenDays() /var/www/photos/application/controllers/Home.php 41
+ERROR - 2018-01-18 23:08:08 --> Severity: Notice --> Undefined variable: eventsView /var/www/photos/application/views/home/admin-dashboard.php 21
+ERROR - 2018-01-18 23:08:08 --> Severity: Notice --> Undefined variable: expenseTypes /var/www/photos/application/views/home/admin-dashboard.php 24
+ERROR - 2018-01-18 23:08:08 --> Severity: Notice --> Undefined variable: eventsBudgetItems /var/www/photos/application/views/home/admin-dashboard.php 35
+ERROR - 2018-01-18 23:55:34 --> Unable to load the requested class: Input
+ERROR - 2018-01-18 23:56:05 --> Severity: Notice --> Undefined property: Timeline::$require_auth /var/www/flow/application/controllers/Timeline.php 28

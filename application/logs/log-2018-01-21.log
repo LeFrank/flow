@@ -1,0 +1,72 @@
+ERROR - 2018-01-21 00:25:31 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 00:25:31 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 00:26:41 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 00:26:41 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 00:26:59 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 00:26:59 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 00:34:51 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 00:34:51 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:00:09 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:00:09 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:05:45 --> 404 Page Not Found: Team/5
+ERROR - 2018-01-21 01:11:41 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:11:41 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:26:45 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:26:45 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:28:56 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 01:28:56 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 03:22:29 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 03:22:29 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 03:23:00 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 03:23:00 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 14:33:53 --> 404 Page Not Found: Faviconico/index
+ERROR - 2018-01-21 14:35:04 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 14:35:04 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 14:36:01 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 14:36:01 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 15:11:42 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 15:11:42 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 15:12:00 --> 404 Page Not Found: Team_members/index
+ERROR - 2018-01-21 15:35:38 --> 404 Page Not Found: Team_members/index
+ERROR - 2018-01-21 15:36:01 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 15:36:01 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 15:36:03 --> 404 Page Not Found: Team-members/index
+ERROR - 2018-01-21 15:36:23 --> Severity: error --> Exception: Unable to locate the model you have specified: Team_member_team_model /var/www/flow/system/core/Loader.php 344
+ERROR - 2018-01-21 15:36:52 --> Severity: error --> Exception: /var/www/flow/application/models/Team_member_team_model.php exists, but doesn't declare class Team_member_team_model /var/www/flow/system/core/Loader.php 336
+ERROR - 2018-01-21 15:46:24 --> Severity: error --> Exception: Call to undefined method Team_member_model::getTeamMembers() /var/www/flow/application/controllers/TeamMember.php 42
+ERROR - 2018-01-21 15:47:21 --> Severity: error --> Exception: Call to undefined method Team_member_model::getTeamMembers() /var/www/flow/application/controllers/TeamMember.php 41
+ERROR - 2018-01-21 15:47:21 --> Severity: error --> Exception: Call to undefined method Team_member_model::getTeamMembers() /var/www/flow/application/controllers/TeamMember.php 41
+ERROR - 2018-01-21 15:47:22 --> Severity: error --> Exception: Call to undefined method Team_member_model::getTeamMembers() /var/www/flow/application/controllers/TeamMember.php 41
+ERROR - 2018-01-21 15:47:49 --> Severity: error --> Exception: Too few arguments to function Team_model::getTeamsByIds(), 1 passed in /var/www/flow/application/controllers/TeamMember.php on line 45 and exactly 2 expected /var/www/flow/application/models/Team_model.php 98
+ERROR - 2018-01-21 15:48:35 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+ORDER BY `created_date` DESC' at line 3 - Invalid query: SELECT *
+FROM `team`
+WHERE `id` IN()
+ORDER BY `created_date` DESC
+ERROR - 2018-01-21 15:49:12 --> Severity: Warning --> Invalid argument supplied for foreach() /var/www/flow/application/helpers/array_helper.php 42
+ERROR - 2018-01-21 16:57:27 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 16:57:27 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:03:33 --> 404 Page Not Found: Team_members/capture
+ERROR - 2018-01-21 17:04:18 --> 404 Page Not Found: Team_members/capture
+ERROR - 2018-01-21 17:04:37 --> 404 Page Not Found: Team_members/capture
+ERROR - 2018-01-21 17:04:43 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:04:43 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:04:46 --> Severity: Warning --> date() expects at least 1 parameter, 0 given /var/www/flow/application/models/Team_member_model.php 27
+ERROR - 2018-01-21 17:04:47 --> 404 Page Not Found: Team_members/index
+ERROR - 2018-01-21 17:04:51 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:04:51 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:07:38 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:07:38 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:08:36 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:08:36 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:09:21 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:09:21 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:09:40 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:09:40 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:09:47 --> 404 Page Not Found: Team_member/1
+ERROR - 2018-01-21 17:10:10 --> 404 Page Not Found: Team_member/1
+ERROR - 2018-01-21 17:10:13 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:10:13 --> 404 Page Not Found: Css/third_party
+ERROR - 2018-01-21 17:10:15 --> 404 Page Not Found: Team-member/1
+ERROR - 2018-01-21 17:10:42 --> Severity: Notice --> Undefined variable: teamMemberId /var/www/flow/application/models/Team_member_team_model.php 109
+ERROR - 2018-01-21 17:10:42 --> Severity: error --> Exception: Call to undefined function removeLinkedTeams() /var/www/flow/application/controllers/TeamMember.php 78
