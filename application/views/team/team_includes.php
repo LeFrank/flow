@@ -10,3 +10,4 @@
     });
  
 </script>
+<script type="text/javascript" src="/js/team/index.js" ></script>

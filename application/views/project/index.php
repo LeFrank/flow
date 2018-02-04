@@ -49,7 +49,7 @@ if (empty($projects)) {
     echo "No projects";
 } else {
     ?>
-    <table id="expense_history" class="tablesorter responsive">
+    <table id="project_list" class="tablesorter responsive">
         <thead>
             <tr>
                 <th>id</th>
@@ -93,9 +93,9 @@ if (empty($projects)) {
                     <td>
                         <a href="/project/<?php echo $v["id"]; ?>/link-to-client">Link to client(s)</a>
                         &nbsp;|&nbsp;
-                        <a href="/project/<?php echo $v["id"]; ?>/update">Edit</a>
+                        <a href="/project/<?php echo $v["id"]; ?>/edit">Edit</a>
                         &nbsp;|&nbsp;
-                        <a href="/project/<?php echo $v["id"]; ?>/delete">Delete</a>
+                        <a href="/project/<?php echo $v["id"]; ?>/delete" onclick="return confirm_delete()">Delete</a>
                     </td>
                 </tr>
                 <?php

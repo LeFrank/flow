@@ -10,3 +10,4 @@
     });
  
 </script>
+<script type="text/javascript" src="/js/project/index.js" ></script>

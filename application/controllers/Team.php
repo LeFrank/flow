@@ -82,4 +82,38 @@ class Team extends CI_Controller {
         $this->load->view('footer');
     }
 
+        public function edit($teamId) {
+        $data['title'] = 'Edit a Team';
+        $data["team"] = $this->team_model->getTeam($teamId);
+        $this->load->view('header');
+        $this->load->view('team/team_nav', $data);
+        $this->load->view('team/edit', $data);
+        $this->load->view('team/team_includes', $data);
+        $this->load->view('footer');
+    }
+
+    public function delete($teamId) {
+        if($data["team"] = $this->team_model->delete($teamId)){
+            redirect("/teams", "refresh");
+        }else{
+            redirect("/teams", "refresh");
+        }
+            
+    }
+
+    public function update($teamId) {
+        $data['title'] = 'Create a Team';
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $data["teams"] = "";
+            $this->load->view('header');
+            $this->load->view('team/team_nav', $data);
+            $this->load->view('team/index', $data);
+            $this->load->view('footer');
+        } else {
+            $data["team"] = $this->team_model->update();
+            redirect("/teams", "refresh");
+        }
+    }
+    
 }

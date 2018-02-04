@@ -31,7 +31,7 @@
         <script type="text/javascript" src="/js/third_party/foundation/6.3.0/what-input.js"></script>
         <script type="text/javascript" src="/js/third_party/foundation/6.3.0/responsive-tables.js"></script>
         <script type="text/javascript" src="/js/third_party/moment/moment.min.js"></script>
-        
+        <script type="text/javascript" src="/js/third_party/jquery.tablesorter.min.js"></script>
          <script>try {
                 Typekit.load({async: true});
             } catch (e) {

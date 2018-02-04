@@ -161,14 +161,18 @@ class Client_model extends CI_Model {
      * @return type
      */
     public function update() {
-        $note = $this->getClient( $this->input->post('id'));
-        $updateCount = $note->update_count + 1;
+        $client = $this->getClient( $this->input->post('id'));
+        $updateCount = $client->update_count + 1;
         $data = array(
             'created_by' => $this->session->userdata("user")->id,
             'name' => $this->input->post('name'),
             'description' => preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $this->input->post('description')),
             'status' => $this->input->post('status'),
-            'created_date' => date('Y/m/d H:i', strtotime($this->input->post('created_date')))
+            'created_date' => date('Y/m/d H:i', strtotime($this->input->post('created_date'))),
+            'last_updated_by' =>$this->session->userdata("user")->id,
+            'update_date' => date('Y/m/d H:i'),
+            'update_count' => $updateCount
+            
         );
         $this->db->where('id', $this->input->post('id'));
         return $this->db->update($this->tn, $data);

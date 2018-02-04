@@ -39,6 +39,9 @@ class TeamMember extends CI_Controller {
     public function index() {
         $data["exitCheck"] = true;
         $data["team_members"] = $this->team_member_model->getTeamMembers();
+//        echo "<pre>";
+//        print_r($data["team_members"]);
+//        echo "</pre>";
         $data["linkedTeams"] = $this->team_member_team_model->getTeamMemberTeamLinks();
         $data["team_memberMap"] = mapTeamMemberIdToTeam($data["linkedTeams"]);
         $linkedTeams = getLinkedTeamIds($data["linkedTeams"]);
@@ -66,16 +69,20 @@ class TeamMember extends CI_Controller {
     }
     
     
-    public function linkTeam($team_memberId) {
-        $data['title'] = 'Link a team_member to a team';
-        $this->load->model('team_model');
+    public function linkTeam($teamMemberId) {
+        $data['title'] = 'Link a team member to a team';
+        $this->load->model('team_member_team_model');
         
-        $data["team_memberId"] = $team_memberId;
-        $data["linkedTeams"] = $this->team_member_team_model->getTeamMemberTeamLinksbyTeamMemberId($team_memberId);
-        $data["linkedTeamArr"] = array_column($data["linkedTeams"], "team_id");
+        $data["team_member_Id"] = $teamMemberId;
+        $data["linkedTeams"] = $this->team_member_team_model->getTeamMemberTeamLinksbyTeamMemberId($teamMemberId);
+//        echo "<pre>";
+//        print_r($data["linkedTeams"]);
+//        echo "</pre>";
+        $data["linkedTeamMemberArr"] = array_column($data["linkedTeams"], "team_id");
+        
         $data["teams"] = $this->team_model->getTeams();
-        $data["team_member"] = $this->team_member_model->getTeamMember($team_memberId);
-        $data["unlinkedTeams"] = removeLinkedTeams($data["teams"], $data["linkedTeams"]);
+        $data["team_member"] = $this->team_member_model->getTeamMember($teamMemberId);
+        $data["unlinkedTeams"] = removeLinkedTeamMember($data["teams"], $data["linkedTeams"]);
         $this->load->view('header');
         $this->load->view('team_member/link_to_team',$data);
         $this->load->view('team_member/team_member_includes', $data);

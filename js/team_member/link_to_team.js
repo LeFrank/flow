@@ -35,7 +35,7 @@ $(document).ready(function () {
 //    });
 });
 
-function linkTeam_MemberToTeam(ele) {
+function link_Team_Member_To_Team(ele) {
     var teamId = $(ele).val();
     var team_memberId = $("#team_member_id").val();
     console.log($("#team_member_id").val());
@@ -44,7 +44,7 @@ function linkTeam_MemberToTeam(ele) {
     console.log(data);
 //        console.log(data.serialize());
     $.post(
-            "/team_member/new/link-to-team",
+            "/team-member/new/link-to-team",
             data
             ).done(function (resp) {
         console.log(resp);

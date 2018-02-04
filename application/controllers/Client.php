@@ -37,7 +37,7 @@ class Client extends CI_Controller {
         $data["exitCheck"] = true;
         $data["clients"] = $this->client_model->getClients();
         $this->load->view('header');
-        $this->load->view('client/index',$data);
+        $this->load->view('client/index', $data);
         $this->load->view('client/client_includes', $data);
         $this->load->view('footer');
     }
@@ -53,6 +53,40 @@ class Client extends CI_Controller {
             $this->load->view('footer');
         } else {
             $data["client"] = $this->client_model->capture_client();
+            redirect("/clients", "refresh");
+        }
+    }
+
+    public function edit($clientId) {
+        $data['title'] = 'Edit a Client';
+        $data["client"] = $this->client_model->getClient($clientId);
+        $this->load->view('header');
+        $this->load->view('client/client_nav', $data);
+        $this->load->view('client/edit', $data);
+        $this->load->view('client/client_includes', $data);
+        $this->load->view('footer');
+    }
+
+    public function delete($clientId) {
+        if($data["client"] = $this->client_model->delete($clientId)){
+            redirect("/clients", "refresh");
+        }else{
+            redirect("/clients", "refresh");
+        }
+            
+    }
+
+    public function update($clientId) {
+        $data['title'] = 'Create a Client';
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $data["clients"] = "";
+            $this->load->view('header');
+            $this->load->view('client/client_nav', $data);
+            $this->load->view('client/index', $data);
+            $this->load->view('footer');
+        } else {
+            $data["client"] = $this->client_model->update();
             redirect("/clients", "refresh");
         }
     }
