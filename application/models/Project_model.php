@@ -42,6 +42,7 @@ class Project_model extends CI_Model {
     public function delete($id) {
         $this->db->where("id", $id);
         $this->db->delete($this->tn);
+        return TRUE;
     }
 
     /**
@@ -163,8 +164,8 @@ class Project_model extends CI_Model {
      * @return type
      */
     public function update() {
-        $note = $this->getProject( $this->input->post('id'));
-        $updateCount = $note->update_count + 1;
+        $project = $this->getProject( $this->input->post('id'));
+        $updateCount = $project->update_count + 1;
         $data = array(
             'created_by' => $this->session->userdata("user")->id,
             'name' => $this->input->post('name'),

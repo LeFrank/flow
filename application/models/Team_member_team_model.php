@@ -100,13 +100,13 @@ class Team_member_team_model extends CI_Model {
      * @param type $offset if present offset the result by this value else no offset
      * @return null
      */
-    public function getTeamMemberTeamLinksbyTeamMemberId($teamMemberTeam, $limit = null, $offset = 0, $count = false) {
+    public function getTeamMemberTeamLinksbyTeamMemberId($teamMemberId, $limit = null, $offset = 0, $count = false) {
 //        echo "userId: ".$userId." >> limit: ".$limit . " >> offset: ". $offset ." >> count: ". $count;
         $this->db->order_by("created_date", "desc");
         if (null == $limit) {
             $query = $this->db->get_where($this->tn);
         }
-        $query = $this->db->get_where($this->tn, array("team_member_id", $teamMemberId));
+        $query = $this->db->get_where($this->tn, array("team_member_id" => $teamMemberId));
 //        echo $this->db->last_query();
         if ($count) {
             return $query->num_rows();

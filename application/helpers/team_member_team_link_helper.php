@@ -1,14 +1,17 @@
 <?php
 
-function removeLinkedTeam($teams, $linkedTeams) {
+function removeLinkedTeamMember($teams, $linkedTeams) {
+    if(empty($linkedTeams)){
+        return $teams;
+    }
     foreach ($linkedTeams as $k => $v) {
         foreach ($teams as $key => $team) {
-            if ($team["id"] == $v["project_id"]) {
-                unset($team[$key]);
+            if ($team["id"] == $v["team_id"]) {
+                unset($teams[$key]);
             }
         }
     }
-    return $$teams;
+    return $teams;
 }
 
 function getLinkedTeamIds($linkedTeams) {
@@ -20,11 +23,13 @@ function getLinkedTeamIds($linkedTeams) {
 }
 
 function mapTeamMemberIdToTeam($teamMemberTeamLinks){
-//    print_r($teamProjectLinks);
-    $teammemberToTeamMap = array();
+//   echo "<pre>";
+//   print_r($teamMemberTeamLinks);
+//   echo "</pre>";
+    $teamMemberToTeamMap = array();
     foreach($teamMemberTeamLinks as $v){
-        $teamMemberTeamLinks[$v->team_member_id][] = $v->team_id;
+        $teamMemberToTeamMap[$v->team_member_id][] = $v->team_id;
     }
 //    print_r($teamToProjectMap);
-    return $teammemberToTeamMap;
+    return $teamMemberToTeamMap;
 }

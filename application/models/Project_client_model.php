@@ -68,6 +68,13 @@ class Project_client_model extends CI_Model {
         return $query->row();
     }
     
+    public function deleteProjectClientLinkByProjectId($projectId) {
+        $this->db->where('project_id' ,$projectId);
+        $this->db->delete($this->tn);
+        log_message('ERROR',$this->db->last_query());
+        echo $this->db->last_query();
+    }
+    
     public function getProjectClientLinks() {
         $query = $this->db->get_where($this->tn);
         return $query->result();

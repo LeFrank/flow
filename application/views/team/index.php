@@ -49,7 +49,7 @@ if (empty($teams)) {
     echo "No teams";
 } else {
     ?>
-    <table id="expense_history" class="tablesorter responsive">
+    <table id="team_list" class="tablesorter responsive">
         <thead>
             <tr>
                 <th>id</th>

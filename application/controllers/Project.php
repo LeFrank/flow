@@ -14,7 +14,7 @@
 class Project extends CI_Controller {
 
     var $toolId = 4;
-    var $toolName = "Project";
+    var $toolName = "project";
     var $require_auth = TRUE;
 
     public function __construct() {
@@ -84,4 +84,43 @@ class Project extends CI_Controller {
         $this->load->view('footer');
     }
 
+    public function edit($projectId) {
+        $data['title'] = 'Edit a Project';
+        $data["project"] = $this->project_model->getProject($projectId);
+        $this->load->view('header');
+        $this->load->view('project/project_nav', $data);
+        $this->load->view('project/edit', $data);
+        $this->load->view('project/project_includes', $data);
+        $this->load->view('footer');
+    }
+
+    public function delete($projectId) {
+        $outp = $data["project"] = $this->project_model->delete($projectId);
+        echo "$outp: " . $outp;
+        if($data["project"] = $this->project_model->delete($projectId)){
+            echo "$projectId: e".$projectId;
+            log_message("ERROR", "$projectId: ".$projectId );
+            $this->project_client_model->deleteProjectClientLinkByProjectId($projectId);
+            redirect("/projects", "refresh");
+        }else{
+            redirect("/projects", "refresh");
+        }
+            
+    }
+
+    public function update($projectId) {
+        $data['title'] = 'Create a Project';
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $data["projects"] = "";
+            $this->load->view('header');
+            $this->load->view('project/project_nav', $data);
+            $this->load->view('project/index', $data);
+            $this->load->view('footer');
+        } else {
+            $data["project"] = $this->project_model->update();
+            redirect("/projects", "refresh");
+        }
+    }
+    
 }

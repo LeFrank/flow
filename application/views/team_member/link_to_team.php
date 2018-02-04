@@ -1,5 +1,5 @@
 <?php ?>
-<input type="hidden" value="<?php echo $team_memberId; ?>" name="team_member_id" id="team_member_id" />
+<input type="hidden" value="<?php echo $team_member_Id; ?>" name="team_member_id" id="team_member_id" />
 <div class="row expanded">
     <div class="large-12 columns">
         <div id="linkTeam_MemberToTeam">
@@ -15,7 +15,7 @@
                     <div class="large-12 columns">
                         <br/>
                         <?php foreach ($teams as $k => $v) { 
-                            if(in_array($v["id"] , $linkedTeamArr)){
+                            if(in_array($v["id"] , $linkedTeamMemberArr)){
                             ?>
                             <div class="row expanded">
                                 <div class="large-4 columns">
@@ -61,7 +61,7 @@
                                 <?php echo $v["description"]; ?>
                             </div>
                             <div class="large-4 columns">
-                                <button class="button" value="<?php echo $v["id"]?>" id="link_team_member_to_team" name="link_team_member_to_team" onClick="linkTeam_MemberToTeam(this);">Link<button>
+                                <button class="button" value="<?php echo $v["id"]?>" id="link_team_member_to_team" name="link_team_member_to_team" onClick="link_Team_Member_To_Team(this);">Link<button>
                             </div>
                         </div>
                         <?php 
