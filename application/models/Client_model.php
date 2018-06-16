@@ -81,9 +81,9 @@ class Client_model extends CI_Model {
      * @param type $offset if present offset the result by this value else no offset
      * @return null
      */
-    public function getClients($limit = null, $offset = 0, $count = false) {
+    public function getClients($limit = null, $offset = 0, $count = false, $orderField="created_date" , $orderDirection="desc") {
 //        echo "userId: ".$userId." >> limit: ".$limit . " >> offset: ". $offset ." >> count: ". $count;
-        $this->db->order_by("created_date", "desc");
+        $this->db->order_by($orderField, $orderDirection);
         if (null == $limit) {
             $query = $this->db->get_where($this->tn);
         } 

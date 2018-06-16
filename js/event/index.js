@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $('#client_list').tablesorter();
+    $('#event_list').tablesorter();
 });

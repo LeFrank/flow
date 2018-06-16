@@ -1,12 +1,12 @@
 <?php ?>
 <div class="row expanded">
     <div class="large-12 columns">
-        <div id="clientssNav" class="clientsNav">
-            <a href="/clients">Overview</a>
+        <div id="eventsNav" class="eventsNav">
+            <a href="/events">Overview</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="/clients/history">History</a>
+            <a href="/event/history">History</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="/expenses/options">Options</a>
+            <a href="/event/options">Options</a>
         </div>
     </div>
 </div>
