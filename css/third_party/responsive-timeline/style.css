@@ -204,7 +204,7 @@ a {
   }
   .timeline-split .period .timeline-title, .timeline-centered .period .timeline-title {
     position: relative;
-    left: -45px;
+    left: 0px;
   }
 }
 

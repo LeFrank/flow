@@ -1,8 +1,8 @@
 <?php
 
-class Client_model extends CI_Model {
+class Event_model extends CI_Model {
 
-    var $tn = "client";
+    var $tn = "event";
 
     public function __construct() {
         parent::__construct();
@@ -16,15 +16,22 @@ class Client_model extends CI_Model {
      * Capture a users expense from a post request. 
      * @return type
      */
-    public function capture_client() {
+    public function capture_event() {
         $this->load->helper('date');
         $this->load->library("session");
         $data = array(
             'created_by' => $this->session->userdata("user")->id,
-            'name' => $this->input->post('name'),
-            'description' => preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $this->input->post('description')),
-            'status' => $this->input->post('status'),
-            'created_date' => date('Y/m/d H:i', strtotime($this->input->post('created_date')))
+            'title' => $this->input->post('title'),
+            'content' => preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $this->input->post('content')),
+//            'status' => $this->input->post('status'),
+            'order' => 0,
+            'client_id' => $this->input->post('clientId'),
+            'project_id' => $this->input->post('projectId'),
+            'team_id' => $this->input->post('teamId'),
+            'start_date' => date('Y/m/d H:i', strtotime($this->input->post('start_date'))),
+            'end_date' => date('Y/m/d H:i', strtotime($this->input->post('end_date'))),
+//            'status' => $this->input->post('status'),
+            'created_date' => date('Y/m/d H:i')
         );
 //        echo $id = $this->db->insert($this->tn, $data);
 //        $tags = explode(",", $this->input->post('tags'));
@@ -81,9 +88,9 @@ class Client_model extends CI_Model {
      * @param type $offset if present offset the result by this value else no offset
      * @return null
      */
-    public function getClients($limit = null, $offset = 0, $count = false) {
+    public function getEvents($limit = null, $offset = 0, $count = false) {
 //        echo "userId: ".$userId." >> limit: ".$limit . " >> offset: ". $offset ." >> count: ". $count;
-        $this->db->order_by("created_date", "desc");
+        $this->db->order_by("start_date", "desc");
         if (null == $limit) {
             $query = $this->db->get_where($this->tn);
         } 
@@ -95,6 +102,21 @@ class Client_model extends CI_Model {
         }
     }
 
+    public function getEventsByDateRange($startDate, $endDate, $limit = null, $offset = 0 , $orderBy=null, $direction = "asc") {
+        if(null != $orderBy){
+            $this->db->order_by($orderBy, $direction);
+        }else{
+            $this->db->order_by("start_date", "desc");
+        }
+        if (null == $limit) {
+            $query = $this->db->get_where($this->tn, array('start_date >=' => $startDate, 'end_date <= ' => $endDate));
+        } else {
+            $query = $this->db->get_where($this->tn, array('start_date >=' => $startDate, 'end_date <= ' => $endDate), $limit, $offset);
+        }
+       echo $this->db->last_query();
+        return $query->result_array();
+    }
+    
     public function getClientsByIds($clientIds) {
         $this->db->order_by("created_date", "desc");
         $this->db->where_in('id', $clientIds);

@@ -164,7 +164,7 @@ class CI_Form_validation {
 	 * @param	array	$errors
 	 * @return	CI_Form_validation
 	 */
-	public function set_rules($field, $label = '', $rules = array(), $errors = array())
+public function set_rules($field, $label = '', $rules = array(), $errors = array())
 	{
 		// No reason to set rules if we have no POST data
 		// or a validation array has not been specified

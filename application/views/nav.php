@@ -15,5 +15,7 @@
         &nbsp;&nbsp;
         <a href="/team-members" >Team Members</a>
         &nbsp;&nbsp;
+        <a href="/events" >Events</a>
+        &nbsp;&nbsp;
         <a href="/timeline" >Time Line</a>
         

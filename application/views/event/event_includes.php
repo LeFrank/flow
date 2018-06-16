@@ -4,9 +4,10 @@
 <script src="/js/jquery.datetimepicker.js"></script>
 <script src="/js/third_party/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-    CKEDITOR.replace( 'description' );
+    CKEDITOR.replace( 'content' );
     $(function() {
-        $("#created_date").datetimepicker();
+        $("#start_date").datetimepicker();
+        $("#end_date").datetimepicker();
     });
  
 </script>
