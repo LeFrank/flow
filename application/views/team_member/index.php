@@ -93,7 +93,7 @@ if (empty($team_members)) {
                     <td>
                         <a href="/team-member/<?php echo $v["id"]; ?>/link-to-team">Link to team(s)</a>
                         &nbsp;|&nbsp;
-                        <a href="/team-member/<?php echo $v["id"]; ?>/update">Edit</a>
+                        <a href="/team-member/<?php echo $v["id"]; ?>/edit">Edit</a>
                         &nbsp;|&nbsp;
                         <a href="/team-member/<?php echo $v["id"]; ?>/delete">Delete</a>
                     </td>

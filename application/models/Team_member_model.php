@@ -24,7 +24,7 @@ class Team_member_model extends CI_Model {
             'name' => $this->input->post('name'),
             'description' => preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $this->input->post('description')),
             'status' => $this->input->post('status'),
-            'created_date' => date('Y/m/d H:i', date()),
+            'created_date' => date('Y/m/d H:i'),
             'start_date' => date('Y/m/d H:i', strtotime($this->input->post('start_date')))
         );
 //        echo $id = $this->db->insert($this->tn, $data);
@@ -163,6 +163,7 @@ class Team_member_model extends CI_Model {
      * @return type
      */
     public function update() {
+        $this->load->helper('date');
         $data = array(
             'created_by' => $this->session->userdata("user")->id,
             'name' => $this->input->post('name'),
@@ -170,7 +171,7 @@ class Team_member_model extends CI_Model {
             'status' => $this->input->post('status'),
             'created_date' => date('Y/m/d H:i', strtotime($this->input->post('created_date'))),
             'start_date' => date('Y/m/d H:i', strtotime($this->input->post('start_date'))),
-            'last_modified' => date('Y/m/d H:i', date())
+            'last_modified' => date('Y/m/d H:i')
         );
         $this->db->where('id', $this->input->post('id'));
         return $this->db->update($this->tn, $data);

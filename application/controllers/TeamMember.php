@@ -47,7 +47,7 @@ class TeamMember extends CI_Controller {
         $linkedTeams = getLinkedTeamIds($data["linkedTeams"]);
         $data["teams"] = arrayMap($this->team_model->getTeamsByIds($linkedTeams));
         $this->load->view('header');
-        $this->load->view('team_member/index',$data);
+        $this->load->view('team_member/index', $data);
         $this->load->view('team_member/team_member_includes', $data);
         $this->load->view('footer');
     }
@@ -64,29 +64,62 @@ class TeamMember extends CI_Controller {
             $this->load->view('footer');
         } else {
             $data["team_member"] = $this->team_member_model->capture_team_member();
-            redirect("/team_members", "refresh");
+            redirect("/team-members", "refresh");
         }
     }
-    
-    
+
+    public function edit($teammemberId) {
+        $data['title'] = 'Edit a Team Member';
+        $data["team_member"] = $this->team_member_model->getTeamMember($teammemberId);
+        $this->load->view('header');
+        $this->load->view('team_member/team_member_nav', $data);
+        $this->load->view('team_member/edit', $data);
+        $this->load->view('team_member/team_member_includes', $data);
+        $this->load->view('footer');
+    }
+
     public function linkTeam($teamMemberId) {
         $data['title'] = 'Link a team member to a team';
         $this->load->model('team_member_team_model');
-        
+
         $data["team_member_Id"] = $teamMemberId;
         $data["linkedTeams"] = $this->team_member_team_model->getTeamMemberTeamLinksbyTeamMemberId($teamMemberId);
 //        echo "<pre>";
 //        print_r($data["linkedTeams"]);
 //        echo "</pre>";
         $data["linkedTeamMemberArr"] = array_column($data["linkedTeams"], "team_id");
-        
+
         $data["teams"] = $this->team_model->getTeams();
         $data["team_member"] = $this->team_member_model->getTeamMember($teamMemberId);
         $data["unlinkedTeams"] = removeLinkedTeamMember($data["teams"], $data["linkedTeams"]);
         $this->load->view('header');
-        $this->load->view('team_member/link_to_team',$data);
+        $this->load->view('team_member/link_to_team', $data);
         $this->load->view('team_member/team_member_includes', $data);
         $this->load->view('footer');
+    }
+
+    public function delete($teamMemberId) {
+        if ($data["team_member"] = $this->team_member_model->delete($teamMemberId)) {
+            redirect("/team-members", "refresh");
+        } else {
+            redirect("/team-members", "refresh");
+        }
+    }
+
+    public function update($teamMemberId) {
+        $data['title'] = 'Update a Team Member';
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $data["team_member"] = "";
+            $this->load->view('header');
+            $this->load->view('team_member/team_member_nav', $data);
+            $this->load->view('team_member/index', $data);
+            $this->load->view('team_member/team_member_includes', $data);
+            $this->load->view('footer');
+        } else {
+            $data["team_member"] = $this->team_member_model->update();
+            redirect("/team-members", "refresh");
+        }
     }
 
 }
