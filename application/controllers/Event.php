@@ -45,7 +45,7 @@ class Event extends CI_Controller {
         $data["teamMembers"] = arrayMap($this->team_member_model->getTeamMembers(null, 0, false, "name" ,"ASC"));
         $data["events"] = $this->event_model->getEvents();
         $this->load->view('header');
-        $this->load->view('event/event_nav', $data);
+//        $this->load->view('event/event_nav', $data);
         $this->load->view('event/index', $data);
         $this->load->view('event/event_includes', $data);
         $this->load->view('footer');
@@ -58,7 +58,7 @@ class Event extends CI_Controller {
             echo "fail";
             $data["events"] = "";
             $this->load->view('header');
-            $this->load->view('event/event_nav', $data);
+//            $this->load->view('event/event_nav', $data);
             $this->load->view('event/index', $data);
             $this->load->view('footer');
         } else {
